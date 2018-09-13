@@ -1,0 +1,6 @@
+framework module Pods_CBUValidator_Tests {
+  umbrella header "Pods-CBUValidator_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}

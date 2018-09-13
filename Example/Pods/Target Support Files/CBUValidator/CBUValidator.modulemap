@@ -1,0 +1,6 @@
+framework module CBUValidator {
+  umbrella header "CBUValidator-umbrella.h"
+
+  export *
+  module * { export * }
+}
