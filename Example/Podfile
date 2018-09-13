@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'CBUValidator_Example' do
+  pod 'CBUValidator', :path => '../'
+
+  target 'CBUValidator_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
