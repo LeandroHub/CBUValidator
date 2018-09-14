@@ -44,7 +44,7 @@ if cbu.validateCBU() {
 
 You'll probably need to create a swift file so that your project gets ready to run a Swift pod. Also check you target's Build Settings so that it matches a 4.0 Swift version: open your target's Build Settings, search for the keyboard 'swift' and make any necessary changes. 
 
-```
+```objective-c
 @import CBUValidator;
 .
 .
@@ -58,7 +58,7 @@ if (cbu.validateCBU) {
 
 ## Author
 
-LeandroHub, leandro.fournier@gmail.com
+Leandro Fournier, leandro.fournier@gmail.com
 
 ## License
 
