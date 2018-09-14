@@ -66,13 +66,18 @@ class CBUValidator {
 public extension NSString {
     
     @objc public func validateCBU() -> Bool {
+        return (self as String).validateCBU()
+    }
+}
+
+
+public extension String {
+    
+    public func validateCBU() -> Bool {
         let cbuValidator = CBUValidator()
-        print("VALIDATING \(self)")
-        if cbuValidator.validateLength(cbu: self as String) && cbuValidator.validateFirstBlock(cbu: self as String) && cbuValidator.validateSecondBlock(cbu: self as String) {
-            print("VALID!")
+        if cbuValidator.validateLength(cbu: self) && cbuValidator.validateFirstBlock(cbu: self) && cbuValidator.validateSecondBlock(cbu: self) {
             return true
         } else {
-            print("NOT VALID!")
             return false
         }
     }

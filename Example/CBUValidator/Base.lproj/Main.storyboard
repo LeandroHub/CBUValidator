@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vXZ-lx-hvc">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -20,11 +20,55 @@
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="T8M-J8-VGy">
+                                <rect key="frame" x="60" y="198.5" width="255" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter a CBU" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LPk-rZ-n7S">
+                                <rect key="frame" x="98.5" y="100" width="178" height="38.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vj5-lE-S2f">
+                                <rect key="frame" x="240" y="236" width="75" height="41"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="24"/>
+                                <state key="normal" title="Check"/>
+                                <connections>
+                                    <action selector="checkButtonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="XjD-n9-Oeq"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xyJ-JJ-eMW">
+                                <rect key="frame" x="187.5" y="337" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="32"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="T8M-J8-VGy" secondAttribute="trailing" constant="60" id="2KH-7g-9QQ"/>
+                            <constraint firstItem="xyJ-JJ-eMW" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="707-6c-XK1"/>
+                            <constraint firstItem="Vj5-lE-S2f" firstAttribute="trailing" secondItem="T8M-J8-VGy" secondAttribute="trailing" id="DFJ-bq-f6S"/>
+                            <constraint firstItem="Vj5-lE-S2f" firstAttribute="top" secondItem="T8M-J8-VGy" secondAttribute="bottom" constant="8" id="SFM-sG-X5j"/>
+                            <constraint firstItem="LPk-rZ-n7S" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="ScN-mB-YNr"/>
+                            <constraint firstItem="T8M-J8-VGy" firstAttribute="top" secondItem="LPk-rZ-n7S" secondAttribute="bottom" constant="60" id="TPR-2o-UE1"/>
+                            <constraint firstItem="LPk-rZ-n7S" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="80" id="bCj-MN-Kqn"/>
+                            <constraint firstItem="xyJ-JJ-eMW" firstAttribute="top" secondItem="Vj5-lE-S2f" secondAttribute="bottom" constant="60" id="ucN-SO-FqZ"/>
+                            <constraint firstItem="T8M-J8-VGy" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="60" id="zq1-Nv-81V"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="cbuTextField" destination="T8M-J8-VGy" id="P23-xY-KRy"/>
+                        <outlet property="validationLabel" destination="xyJ-JJ-eMW" id="BHC-Dw-Ikg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="132.68365817091455"/>
         </scene>
     </scenes>
 </document>

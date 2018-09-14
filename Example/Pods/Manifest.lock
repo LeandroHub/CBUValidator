@@ -1,5 +1,5 @@
 PODS:
-  - CBUValidator (0.1.0)
+  - CBUValidator (0.1.1)
 
 DEPENDENCIES:
   - CBUValidator (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  CBUValidator: 849285206a40140177e82e0d5baab2adef8e248e
+  CBUValidator: d414f30928735decb5ee309f8b04614fa495c632
 
 PODFILE CHECKSUM: 45bd20004ad127974c8a5121cea652ee8503ed3b
 

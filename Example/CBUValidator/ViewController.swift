@@ -7,17 +7,24 @@
 //
 
 import UIKit
+import CBUValidator
 
 class ViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
+    @IBOutlet weak var cbuTextField: UITextField!
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    @IBOutlet weak var validationLabel: UILabel!
+    
+    @IBAction func checkButtonPressed(_ sender: Any) {
+        guard let cbu = cbuTextField.text else {
+            return
+        }
+        
+        if cbu.validateCBU() {
+            validationLabel.text = "Valid!"
+        } else {
+            validationLabel.text = "Invalid!"
+        }
     }
-
 }
 
